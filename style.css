@@ -1,0 +1,249 @@
+
+/* Universal Selector */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0px;
+}
+
+.inner-parent {
+    display: flex;
+    gap: 20px;
+}
+
+.inner-parent a {
+    color: white;
+    text-decoration: none;
+}
+
+.inner-parent a:hover {
+    color: yellow;
+}
+
+/* Home Section */
+
+.home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 30px;
+    gap: 20px;
+}
+
+.home-text h1 {
+    font-size: 35px;
+}
+
+.home-text h2 {
+    color: orangered;
+    margin-top: 10px;
+    animation: changeColor 2s infinite alternate;
+}
+
+.home-text p {
+    margin-top: 15px;
+}
+
+.home-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* About Section */
+
+.about {
+    padding: 30px;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.about p {
+    line-height: 25px;
+}
+
+/* Skills Section */
+
+.skills {
+    padding: 30px;
+}
+
+.skills h2 {
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.item:hover {
+    background-color: orangered;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Projects Section */
+
+.projects {
+    padding: 30px;
+}
+
+.projects h2 {
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 2px 5px gray;
+}
+
+.project:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+/* Contact Section */
+
+.contact {
+    padding: 30px;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    width: 350px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 2px 5px gray;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: orangered;
+}
+
+/* Footer */
+
+.footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Animation */
+
+@keyframes changeColor {
+
+    from {
+        color: orangered;
+    }
+
+    to {
+        color: blue;
+    }
+
+}
+
+/* Tablet Responsive */
+
+@media screen and (max-width: 1000px) {
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 500px) {
+
+    .inner-parent {
+        display: none;
+    }
+
+    .skills-container,
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-text h1 {
+        font-size: 25px;
+    }
+
+    .home-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+}
